@@ -53,4 +53,14 @@ public class Lambda {
         }
         return total;
     }
+    
+    public static int sumAllOfCondition(List<Integer> numbers, Conditional condition) {
+        int total = 0;
+        for (int number : numbers) {
+            if (condition.test(number)) {
+                total += number;
+            }
+        }
+        return total;
+    }
 }
