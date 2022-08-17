@@ -19,4 +19,10 @@ public class InputView {
         playerNames = playerNames.replaceAll("\\s+", "");
         return playerNames.split(",");
     }
+    
+    public static void saveBetMoneys(Players players, List<Integer> betMoneys) {
+        // 배팅금액 리스트 입력받는 메서드는 나중에 구현하기.
+        
+        players.inputBetMoneys(betMoneys);
+    }
 }

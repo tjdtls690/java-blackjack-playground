@@ -10,6 +10,12 @@ public class Players {
         this.playerList = playerList;
     }
     
+    public void inputBetMoneys(List<Integer> betMoneys) {
+        for (int i = 0; i < playerList.size(); i++) {
+            playerList.get(i).betMoney(betMoneys.get(i));
+        }
+    }
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
