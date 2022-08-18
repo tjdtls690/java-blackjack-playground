@@ -4,15 +4,15 @@ import java.util.List;
 import java.util.Objects;
 
 public class Players {
-    private final List<Player> playerList;
+    private final List<Playable> playerList;
     
-    public Players(List<Player> playerList) {
+    public Players(List<Playable> playerList) {
         this.playerList = playerList;
     }
     
     public void inputBetMoneys(List<Integer> betMoneys) {
-        for (int i = 0; i < playerList.size(); i++) {
-            playerList.get(i).betMoney(betMoneys.get(i));
+        for (int i = 1; i < playerList.size(); i++) {
+            playerList.get(i).betMoney(betMoneys.get(i - 1));
         }
     }
     

@@ -3,7 +3,6 @@ package com.jun_hyeok.black_jack.domain;
 import java.util.Objects;
 
 public class AbstractPlayer implements Playable {
-    private static final Dealer DEALER = new Dealer();
     private final String name;
     private int betMoney;
     
