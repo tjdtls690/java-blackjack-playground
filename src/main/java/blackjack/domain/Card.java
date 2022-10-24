@@ -9,7 +9,7 @@ public class Card {
         this.number = number;
     }
     
-    public int number() {
-        return number.number();
+    public Number number() {
+        return number;
     }
 }

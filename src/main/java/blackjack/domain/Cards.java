@@ -2,8 +2,11 @@ package blackjack.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cards {
+    private static final int BLACK_JACK_NUMBER = 21;
+    
     private final List<Card> cards;
     
     public Cards() {
@@ -14,9 +17,13 @@ public class Cards {
         cards.add(card);
     }
     
-    public int sum() {
+    public boolean isBlackJack() {
+        return Number.sum(numbers()) == BLACK_JACK_NUMBER;
+    }
+    
+    private List<Number> numbers() {
         return cards.stream()
-                .mapToInt(Card::number)
-                .sum();
+                .map(Card::number)
+                .collect(Collectors.toList());
     }
 }

@@ -13,6 +13,10 @@ public class Draw implements State {
     @Override
     public State draw(final Card card) {
         cards.add(card);
+        if (cards.isBlackJack()) {
+            return new BlackJack(cards);
+        }
+        
         return new Draw(cards);
     }
     

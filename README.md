@@ -23,7 +23,7 @@
     - [x] 합 21 미만인 경우
       - [x] 계속 뽑기 선택 => Draw
       - [x] 그만 뽑기 선택 => Stay
-    - [ ] 합 21인 경우 => BlackJack
+    - [x] 합 21인 경우 => BlackJack
     - [ ] 합 21 초과인 경우 => Fail
   - [ ] BlackJack
     - [ ] 배팅금 처리
