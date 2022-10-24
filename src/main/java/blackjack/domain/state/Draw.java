@@ -12,6 +12,12 @@ public class Draw implements State {
     
     @Override
     public State draw(final Card card) {
-        return null;
+        cards.add(card);
+        return new Draw(cards);
+    }
+    
+    @Override
+    public State stay() {
+        return new Stay(cards);
     }
 }
