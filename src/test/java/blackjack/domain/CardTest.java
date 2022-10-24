@@ -6,11 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CardTest {
-    public static final Card CARD = new Card(Shape.CLOVER, Number.TWO);
+    public static final Card CLOVER_TWO = new Card(Shape.CLOVER, Number.TWO);
+    public static final Card HEART_QUEEN = new Card(Shape.HEART, Number.QUEEN);
     
     @Test
     @DisplayName("숫자 구하기")
     void number() {
-        assertThat(CARD.number()).isEqualTo(2);
+        assertThat(CLOVER_TWO.number()).isEqualTo(2);
     }
 }
