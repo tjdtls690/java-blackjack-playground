@@ -17,7 +17,7 @@ public class Cards {
         cards.add(card);
     }
     
-    public boolean isBlackJack() {
+    public boolean isBlackJackNumber() {
         return Number.sum(numbers()) == BLACK_JACK_NUMBER;
     }
     

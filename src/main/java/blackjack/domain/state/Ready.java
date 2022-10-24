@@ -19,7 +19,7 @@ public class Ready implements State {
             return new Ready(cards);
         }
         
-        if (cards.isBlackJack()) {
+        if (cards.isBlackJackNumber()) {
             return new BlackJack(cards);
         }
         return new Draw(cards);

@@ -17,6 +17,9 @@ public class Draw implements State {
             return new Fail(cards);
         }
         
+        if (cards.isBlackJackNumber()) {
+            return new Stay(cards);
+        }
         return new Draw(cards);
     }
     

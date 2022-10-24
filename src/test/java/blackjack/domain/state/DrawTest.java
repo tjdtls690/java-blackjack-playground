@@ -36,4 +36,11 @@ public class DrawTest {
         draw.draw(CardTest.HEART_QUEEN);
         assertThat(draw.draw(CardTest.CLOVER_TWO)).isExactlyInstanceOf(Fail.class);
     }
+    
+    @Test
+    @DisplayName("합 21인 경우 => Stay")
+    void stay_blackjack_number() {
+        draw.draw(CardTest.CLOVER_QUEEN);
+        assertThat(draw.draw(CardTest.SPACE_ACE)).isExactlyInstanceOf(Stay.class);
+    }
 }
