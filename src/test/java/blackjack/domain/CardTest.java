@@ -9,6 +9,7 @@ public class CardTest {
     public static final Card CLOVER_TWO = new Card(Shape.CLOVER, Number.TWO);
     public static final Card HEART_QUEEN = new Card(Shape.HEART, Number.QUEEN);
     public static final Card SPACE_ACE = new Card(Shape.SPACE, Number.ACE);
+    public static final Card CLOVER_QUEEN = new Card(Shape.CLOVER, Number.QUEEN);
     
     @Test
     @DisplayName("숫자 구하기")

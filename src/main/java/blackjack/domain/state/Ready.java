@@ -8,13 +8,20 @@ public class Ready implements State {
     
     private final Cards cards;
     
-    public Ready() {
-        cards = new Cards();
+    public Ready(Cards cards) {
+        this.cards = cards;
     }
     
     @Override
     public State draw(final Card card) {
         cards.add(card);
+        if (cards.isSizeOne()) {
+            return new Ready(cards);
+        }
+        
+        if (cards.isBlackJack()) {
+            return new BlackJack(cards);
+        }
         return new Draw(cards);
     }
     

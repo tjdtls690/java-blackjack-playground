@@ -26,4 +26,8 @@ public class Cards {
                 .map(Card::number)
                 .collect(Collectors.toList());
     }
+    
+    public boolean isSizeOne() {
+        return cards.size() == 1;
+    }
 }
