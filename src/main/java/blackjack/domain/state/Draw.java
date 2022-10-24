@@ -13,6 +13,10 @@ public class Draw implements State {
     @Override
     public State draw(final Card card) {
         cards.add(card);
+        if (cards.isFail()) {
+            return new Fail(cards);
+        }
+        
         return new Draw(cards);
     }
     

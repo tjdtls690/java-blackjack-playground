@@ -28,4 +28,12 @@ public class DrawTest {
     void stay() {
         assertThat(draw.stay()).isExactlyInstanceOf(Stay.class);
     }
+    
+    @Test
+    @DisplayName("합 21 초과인 경우 => Fail")
+    void fail() {
+        draw.draw(CardTest.CLOVER_QUEEN);
+        draw.draw(CardTest.HEART_QUEEN);
+        assertThat(draw.draw(CardTest.CLOVER_TWO)).isExactlyInstanceOf(Fail.class);
+    }
 }

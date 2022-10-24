@@ -21,6 +21,10 @@ public class Cards {
         return Number.sum(numbers()) == BLACK_JACK_NUMBER;
     }
     
+    public boolean isFail() {
+        return Number.sum(numbers()) > BLACK_JACK_NUMBER;
+    }
+    
     private List<Number> numbers() {
         return cards.stream()
                 .map(Card::number)
