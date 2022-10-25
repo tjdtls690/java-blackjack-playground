@@ -3,7 +3,7 @@ package blackjack.domain.state;
 import blackjack.domain.Card;
 import blackjack.domain.Cards;
 
-public class Draw implements State {
+public class Draw extends Running {
     private final Cards cards;
     
     public Draw(final Cards cards) {

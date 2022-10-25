@@ -15,4 +15,9 @@ public abstract class Finished implements State {
     public State stay() {
         throw new IllegalArgumentException(ALREADY_FINISHED_EXCEPTION_MESSAGE);
     }
+    
+    @Override
+    public boolean isFinished() {
+        return true;
+    }
 }
